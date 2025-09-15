@@ -4,7 +4,7 @@ FROM tomcat:10.1-jdk21
 COPY ./JavaPage /usr/local/tomcat/webapps/Javapage
 
 # Copiar el conector MySQL al lib de Tomcat
-COPY ./lib/mysql-connector-j-8.3.0.jar /usr/local/tomcat/lib/
+COPY ./JavaPage/WEB-INF/lib/mysql-connector-j-9.2.0.jar /usr/local/tomcat/lib/
 
 EXPOSE 8080
 
