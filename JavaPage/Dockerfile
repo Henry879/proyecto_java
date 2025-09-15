@@ -1,8 +1,10 @@
 FROM tomcat:10.1-jdk21
 
-WORKDIR /usr/local/tomcat/webapps/proyecto_java/
+# Copiar tu aplicación
+COPY ./JavaPage /usr/local/tomcat/webapps/Javapage
 
-COPY ./JavaPage /usr/local/tomcat/webapps/ROOT
+# Copiar el conector MySQL al lib de Tomcat
+COPY ./lib/mysql-connector-j-8.3.0.jar /usr/local/tomcat/lib/
 
 EXPOSE 8080
 
